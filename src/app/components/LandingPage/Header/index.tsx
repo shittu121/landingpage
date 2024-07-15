@@ -7,7 +7,7 @@ const Header = () => {
     <div>
       <header className='flex justify-between py-5'>
         <Image src="logo.svg" className='ml-5' width={100} height={100} alt="logo" />
-        <div className="items-center gap-10 text-sm text-white lg:flex md:flex sm:flex hidden">
+        <div className="items-center gap-10 text-sm text-white lg:flex md:flex sm:flex">
           <Link href="/">About</Link>
           <Link href="/service">Services</Link>
           <Link href="/project">Projects</Link>
