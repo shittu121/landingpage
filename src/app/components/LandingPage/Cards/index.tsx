@@ -2,8 +2,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Card from '../CardContent'
-import Card2 from '../CardContent/card2'
+import Card from './CardContent'
+import Card2 from './CardContent/card2'
+import Testimonial from '../Testimonial'
+import Card3 from './CardContent/card3'
 
 const Cards1 = () => {
   const cardsData = [
@@ -39,6 +41,28 @@ const Cards1 = () => {
       reverse: true,
     },
   ]
+
+  const profileData = [
+    {
+        title: "Emily R.",
+        description: "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
+        profileimg: "/image-emily.jpg",
+        subtitle: "Chief Operating Officer"
+    },
+    {
+      title: "Thomas S.",
+      description: "Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.",
+      profileimg: "/image-thomas.jpg",
+      subtitle: "Marketing Director"
+    },
+    {
+      title: "Jennie F.",
+      description: "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+      profileimg: "/image-jennie.jpg",
+      subtitle: "Business Owner"
+    },
+  ]
+
   return (
     <div>
       {cardsData.map((card, index) => (
@@ -53,9 +77,22 @@ const Cards1 = () => {
           />
         ))}
       </div>
+
+      <section>
+        <div className="text-center mt-20 mb-10">
+          <span className='text-[18px] uppercase font-light'>Client testimonials</span>
+        </div>
+        <div className="lg:flex md:flex sm:flex block justify-center">
+          {profileData.map((card, index) => (
+              <Testimonial key={index} title={card.title} subtitle={card.subtitle} profileimg={card.profileimg} description={card.description}                
+              />
+          ))}
+        </div>
+      </section>
+
+      <Card3 />
     </div>
   )
 }
-Function
 
 export default Cards1

@@ -8,3 +8,7 @@
     background-size: cover;
     height: 80vh;
 }
+
+.footerbg{
+    background-color: hsl(168, 34%, 41%);
+}
