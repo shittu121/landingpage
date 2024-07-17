@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({ title, content, link, imageurl, reverse = f
           </div>
         </div>
         <div className="lg:w-[50%] md:w-[50%] sm:w-[50%] w-full lg:h-[40%] md:h-full sm:h-full">
-          <Image src={imageurl} className="w-[100%] lg:h-[20rem] md:h-full sm:h-full h-full" width={50} height={50} alt="cardlogo" />
+          <Image src={imageurl} className="w-[100%] lg:h-[20rem] object-cover md:h-full sm:h-full h-full" width={50} height={50} alt="cardlogo" />
         </div>
       </div>
     </section>
